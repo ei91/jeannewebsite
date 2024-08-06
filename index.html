@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrating 5 Months Together EEKKK!</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel ="script" href="script.js" />
+    <script defer src="script.js"></script> <!-- Your existing JS file -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <!-- Background Image as an <img> Element -->
+    <img src="Downloads/IMG_4216.JPG" class="background-image" alt="Background Image">
+    
+    <div class="background-overlay"></div>
+    <div class="icon">
+        <img src="Downloads/jeanne.JPG" alt="Icon">
+    </div>
+    <div class="container">
+        <h1>Celebrating 5 Months Together EEEEK!</h1>
+        <p>Happy 5 Months my love, i am deeply in love with this journey we are having together, and with each passing day, my love and admiration for you have only grown stronger (i love you so much that i generally forget you have a accent lmaooo). You deserve the whole bombaclart solar system due to you having the most compassionate heart and kindest soul. I admire and adore you Immensely you are my one and only true lover. Your thoughtfulness and your laughter is the sweetest melody I've ever known even better than ksuave. Every moment we have together is a cherished memory, and I am endlessly grateful for the love, support, and joy you bring into my life. I'm so passionate about you i have never romantically loved a woman this badly and you just make it easy #RealBadd .Here's to many more months of shared dreams, endless laughter, and unwavering love. Each pic represents each month(2&5 are months we were in long distance :( <br>)  I love you more than words can express  (ps: i miss you dearly pooks COMEE BACKKKKK TO CANTS ALREADY ).</p>
+        
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <video controls>
+                        <source src="Downloads/filtered-FF4BD774-9B4C-4A27-B297-4E0196045781.MP4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="swiper-slide"><img src="Downloads/IMG_1223.PNG" alt="Image 2"></div>
+                <div class="swiper-slide"><img src="Downloads/May1.JPG" alt="Image 3"></div>
+                <div class="swiper-slide"><img src="Downloads/june.JPG" alt="Image 4"></div>
+                <div class="swiper-slide"><img src="Downloads/lp_image_3.jpg" alt="Image 5"></div>
+                <div class="swiper-slide"><img src="Downloads/beginning.JPG" alt="Image 6"></div>
+                <div class="swiper-slide"><img src="Downloads/extra.JPG" alt="Image 7"></div>
+                <!-- Add more slides as needed -->
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Progress Text -->
+        <div id="progressText">
+            <p>Month 1</p>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.swiper-container', {
+                loop: true,
+                autoplay: {
+                    delay: 5000, // Change delay if needed
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+
+            const monthTexts = [
+                'Month 1',
+                'Month 2',
+                'Month 3',
+                'Month 4',
+                'Month 5',
+                'humble beginnings lmaooo',
+                'extra fav pic!'
+            ];
+
+            function updateProgressText(index) {
+                const progressText = document.getElementById('progressText');
+                progressText.querySelector('p').textContent = monthTexts[index] || 'Month ' + (index + 1);
+            }
+
+            swiper.on('slideChange', function () {
+                updateProgressText(swiper.realIndex);
+            });
+
+            updateProgressText(swiper.realIndex); // Initial call to set the progress text
+        });
+</script>
+
+
+</body>
+</html>
